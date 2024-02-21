@@ -100,7 +100,60 @@
                 "type" : "text",
                 "text" : "LIFF ShareTargetPicker 分享訊息"
             }`)
-            liff.shareTargetPicker([message], { isMultiple: true, });
+            // 創建 Flex Message
+const flexMessage = {
+        "type": "flex",
+        "altText": "This is a Flex Message",
+        "contents": {
+            "type": "bubble",
+            "direction": "ltr",
+            "header": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "分享內容",
+                        "align": "center",
+                        "weight": "bold"
+                    }
+                ]
+            },
+            "hero": {
+                "type": "image",
+                "url": "https://example.com/image.jpg",
+                "size": "full",
+                "aspectRatio": "20:13",
+                "aspectMode": "cover"
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "這是一個簡單的 Flex Message 範例。",
+                        "wrap": true
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "uri",
+                            "label": "查看更多",
+                            "uri": "https://example.com"
+                        }
+                    }
+                ]
+            }
+        }
+    };
+            liff.shareTargetPicker([flexMessage], { isMultiple: true, });
         }
 
     </script>
