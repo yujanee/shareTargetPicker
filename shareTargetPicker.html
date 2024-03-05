@@ -24,7 +24,9 @@
             const defaultLiffId = '2003717617-GbzlBx97';
             $(document).ready(function () {
                 liffInit(defaultLiffId);
+                 sendMessage() ;
             });
+            
         }
         function liffInit(liffId) {
             // withLoginOnExternalBrowser : true 時代表 auto login 啟動，LIFF 初始化後會自動呼叫 liff.login 登入。
@@ -145,8 +147,8 @@ const flexMessage = {
                         "type": "button",
                         "action": {
                             "type": "uri",
-                            "label": "查看更多",
-                            "uri": "https://example.com"
+                            "label": "分享",
+                            "uri": "https://liff.line.me/2003717617-GbzlBx97"
                         }
                     }
                 ]
