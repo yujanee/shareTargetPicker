@@ -24,13 +24,14 @@
             const defaultLiffId = '2003717617-GbzlBx97';
             $(document).ready(function () {
                 liffInit(defaultLiffId);
-               shareTargetPicker();
+
             });
             
         }
         function liffInit(liffId) {
             // withLoginOnExternalBrowser : true 時代表 auto login 啟動，LIFF 初始化後會自動呼叫 liff.login 登入。
             liff.init({ liffId: liffId, withLoginOnExternalBrowser: true }).then(() => {
+                               shareTargetPicker();
                 $("#os").text(liff.getOS());
                 $("#language").text(liff.getLanguage());
                 $("#version").text(liff.getVersion());
