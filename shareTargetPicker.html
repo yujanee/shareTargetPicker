@@ -94,7 +94,8 @@
                 });
         }
 
-        function shareTargetPicker() {
+       async  function shareTargetPicker() {
+              await liff.init({ liffId: "2003717617-GbzlBx97" });
             if (!liff.isApiAvailable('shareTargetPicker')) {
                 console.log("請檢查 Line 版本是否為 10.3.0 以上")
                 return;
