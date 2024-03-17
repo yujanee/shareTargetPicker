@@ -21,6 +21,20 @@
 <body>
     <div class="topnav">
     </div>
+	<div class="signup">
+		<h2 class="form-title"><span>or</span>蓼蓼麵包小賣所 lùlù bakery</h2>
+
+		<button class="submit-btn" id="btnLogin" onclick="liff.login()">登入</button>
+		<button class="submit-btn" id="btnShare" onclick="sendShare()" style="display: none;">分享</button>
+		<button class="submit-btn" id="btnLogOut" onclick="logOut()" style="display: none;">登出</button>
+	</div>
+	<div class="login slide-up">
+		<div class="center">
+			<h2 class="form-title" id="login"><span>按讚追蹤</span>蓼蓼麵包小賣所 lùlù bakery</h2>			
+		</div>
+	</div>
+
+	
     <script>
 async function sendShare() {
    await liff.init({ liffId: "2004135117-G06LWaO8" });
