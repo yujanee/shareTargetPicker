@@ -189,12 +189,11 @@ console.log(liff.isApiAvailable('shareTargetPicker'));
       liff.logout()
       window.location.reload()
     }
+	  
     async function main() {
-   
+      await liff.init({ liffId: "2004135117-G06LWaO8" })
       if (liff.isLoggedIn()) {
-        document.getElementById("btnShare").style.display = "block";
-		 document.getElementById("btnLogin").style.display = "none";
-		 document.getElementById("btnLogOut").style.display = "block"
+        document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
           document.getElementById("btnLogOut").style.display = "block"
         }
