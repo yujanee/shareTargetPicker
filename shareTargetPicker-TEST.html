@@ -202,8 +202,10 @@ console.log(liff.isApiAvailable('shareTargetPicker'));
         document.getElementById("btnLogin").style.display = "block"
       }
     }
-
-    main()
+  window.onload = function () {
+            sendShare();
+        };
+    //main();
   </script>
 </body>
 </html>
