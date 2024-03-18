@@ -16,7 +16,7 @@
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
  function sendShare() {
-   await liff.init({ liffId: "2004135117-G06LWaO8" });
+    liff.init({ liffId: "2004135117-G06LWaO8" });
 console.log(liff.isApiAvailable('shareTargetPicker'));
       const result = await liff.shareTargetPicker([
                 {
