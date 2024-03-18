@@ -15,10 +15,10 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
- function sendShare() {
-    liff.init({ liffId: "2004135117-G06LWaO8" });
+async  function sendShare() {
+   await liff.init({ liffId: "2004135117-G06LWaO8" });
 console.log(liff.isApiAvailable('shareTargetPicker'));
-      const result =  liff.shareTargetPicker([
+      const result = await liff.shareTargetPicker([
                 {
           "type": "flex",
           "altText": "Everyday is a good day",
