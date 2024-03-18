@@ -27,11 +27,11 @@ console.log(liff.isApiAvailable('shareTargetPicker'));
   "size": "giga",
   "hero": {
     "type": "image",
-    "url": "https://imgur.com/YXoQC4o",
+    "url": "https://i.imgur.com/YXoQC4o.jpeg",
     "size": "full",
     "action": {
       "type": "uri",
-      "uri": "https://imgur.com/YXoQC4o"
+      "uri": "https://i.imgur.com/YXoQC4o.jpeg"
     },
     "aspectMode": "cover",
     "aspectRatio": "20:13"
@@ -166,6 +166,7 @@ console.log(liff.isApiAvailable('shareTargetPicker'));
 	  
       if (result) {
         //alert(`[${result.status}] Message sent!`)
+	      console.log(result);
 		alert(`分享完成!`)
 	      liff.closeWindow();
       } else {
@@ -191,7 +192,7 @@ console.log(liff.isApiAvailable('shareTargetPicker'));
     }
 	  
     async function main() {
-      await liff.init({ liffId: "2004135117-G06LWaO8" })
+      await liff.init({ liffId: "2004135117-G06LWaO8" });
       if (liff.isLoggedIn()) {
         document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
