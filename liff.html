@@ -161,7 +161,17 @@
       }
 
 
-       if (liff.isApiAvailable('shareTargetPicker')) {
+      liff.shareTargetPicker([{
+          type: "text",
+          text: message
+        }])
+        .then(
+          //alert("ShareTargetPicker was launched")
+        ).catch(function(res) {
+          //alert("Failed to launch ShareTargetPicker")
+        })
+
+       /*if (liff.isApiAvailable('shareTargetPicker')) {
         liff.shareTargetPicker([{
           type: "text",
           text: message
@@ -178,7 +188,7 @@
           url: "https://www.google.com/",
           external: true
         });
-      }
+      }*/
     });
 
     function initVConsole() {
