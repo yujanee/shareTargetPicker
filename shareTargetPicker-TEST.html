@@ -193,7 +193,7 @@ console.log(liff.isApiAvailable('shareTargetPicker'));
     }
 	  
     async function main() {
-      await liff.init({ liffId: "2004135117-G06LWaO8" });
+      await liff.init({ liffId: "2004135117-G06LWaO8", withLoginOnExternalBrowser: true  });
       if (liff.isLoggedIn()) {
         document.getElementById("btnShare").style.display = "block"
         if (!liff.isInClient()) {
