@@ -128,11 +128,11 @@
       })
       .then(() => {
         if (!liff.isInClient()) {
-          if (!liff.isLoggedIn()) {
+          /*if (!liff.isLoggedIn()) {
             liff.login({
               redirectUri: "https://www.google.com/"
             })
-          }
+          }*/
         }
       })
       .catch((err) => {
@@ -182,7 +182,7 @@
     });
 
     function initVConsole() {
-      window.vConsole = new window.VConsole({
+      /*window.vConsole = new window.VConsole({
         defaultPlugins: ['system', 'network', 'element', 'storage'],
         maxLogNumber: 1000,
         onReady: function() {
@@ -191,7 +191,7 @@
         onClearLog: function() {
           console.log('on clearLog');
         }
-      });
+      });*/
     }
   })
 </script>
